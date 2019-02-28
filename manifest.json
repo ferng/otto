@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "OTTO - Automated Form Filler",
+  "name": "otto - Automated Form Filler",
   "description": "This extension Populates form data",
   "version": "1.0",
 
@@ -14,7 +14,8 @@
     "scripts":["screenMgr.js"]
   },
   "permissions": [
-    "tabs", "http://*/runlog/*"
+    "tabs",
+    "http://*/runlog/*"
   ],
   "commands": {
     "fill_data": {
@@ -26,9 +27,6 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "http://www.google.com/*"
-      ]
     }
   ]
 }
