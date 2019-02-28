@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "OTTO - Automated Form Filler",
+  "description": "This extension Populates form data",
+  "version": "1.0",
+
+  "icons": { "48": "profile48.png"},
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Click here!"
+  },
+  "background":{
+    "scripts":["screenMgr.js"]
+  },
+  "permissions": [
+    "tabs", "http://*/runlog/*"
+  ],
+  "commands": {
+    "fill_data": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "fill_data"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.google.com/*"
+      ]
+    }
+  ]
+}
